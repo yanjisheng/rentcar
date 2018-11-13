@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<title>您无权访问本页面</title>
+</head>
+<body>
+<h1>您无权访问本页面</h1>
+<span id="seconds">3</span>秒后自动返回主页……<br>
+如果页面没有自动跳转，请<a href="index.html">点此返回主页</a><br>
+<a href="today.jsp">看看今天是什么日子</a>
+<script>
+var seconds = 3;
+setInterval(function(){
+	seconds -=1;
+	document.getElementById('seconds').innerHTML=seconds;
+	if(seconds<=0){
+		window.self.location='index.html';
+	}
+},1000);
+</script>
+</body>
+</html>
